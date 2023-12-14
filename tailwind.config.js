@@ -21,6 +21,18 @@ module.exports = {
 
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
+    },
+    extend:{
+     colors:{
+      Bsepa: {
+        100: '#f6f4fe',
+        200: '#e9ebf',
+        300: '#0e286b',
+      },
+      Ysepa: {
+        100: '#eec01d',
+      },
+     }
     }
   },
   plugins: [],

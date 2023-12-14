@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-    home
+    <div className="w-full h-screen bg-Bsepa-100">12345678910</div>
     </>
   )
 }
