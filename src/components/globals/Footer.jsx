@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            <div className="grid grid-cols-4 gap-12 bg-Bsepa-300 py-12 px-8 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:reverse">
+            <div className="grid grid-cols-4 gap-12 bg-Bsepa-300 py-12 px-8 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mt-24">
                 <ul>
                     <li className="flex items-end flex-col gap-4">
                         <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />
