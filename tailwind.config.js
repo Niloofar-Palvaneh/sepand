@@ -26,7 +26,7 @@ module.exports = {
      colors:{
       Bsepa: {
         100: '#f6f4fe',
-        200: '#e9ebf',
+        200: '#e9ebfa',
         300: '#0e286b',
       },
       Ysepa: {
