@@ -7,6 +7,7 @@ import NewArticles from "@/components/ui/NewArticles";
 import OurServises from "@/components/ui/OurServises";
 import Rank from "@/components/ui/Rank";
 import Slider from "@/components/ui/Slider";
+import Validity from "@/components/ui/Validity";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Bests/>
       <Gallery/>
       <NewArticles/>
+      <Validity/>
       <Footer />
     </>
   )
