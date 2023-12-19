@@ -62,7 +62,7 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
+                        <Link href={"/blogs"} className="flex items-center gap-2 text-Bsepa-100">
                             وبلاگ
                             <MdOutlineArrowBack className="text-sm" />
                         </Link>

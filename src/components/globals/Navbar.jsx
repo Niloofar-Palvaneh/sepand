@@ -25,7 +25,7 @@ export default function Navbar() {
         {
             "id": 4,
             "title": "وبلاگ",
-            "href": "#"
+            "href": "/blogs"
         },
         {
             "id": 5,
