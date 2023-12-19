@@ -10,7 +10,7 @@ export default function Navbar() {
         {
             "id": 1,
             "title": "صفحه اصلی",
-            "href": "#"
+            "href": "/"
         },
         {
             "id": 2,
@@ -30,7 +30,7 @@ export default function Navbar() {
         {
             "id": 5,
             "title": "تماس با ما",
-            "href": "#"
+            "href": "/contact"
         }
     ]
     const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
