@@ -1,20 +1,14 @@
 import Image from "next/image"
 import { LiaEyeSolid, LiaHeart } from "react-icons/lia";
 import { TbMessageDots } from "react-icons/tb";
+import Title from "./Title";
 
 export default function NewArticles() {
     return (
         <>
             <div className="w-full flex items-center justify-center my-12">
                 <div className="w-[83%] sm:w-full md:w-full xl:w-[98%]">
-                    <div className="flex items-center justify-between">
-                        <button className="border border-Bsepa-300 text-Bsepa-300 bg-transparent transition-all hover:bg-Bsepa-300 hover:text-white rounded-xl px-2 py-1">
-                            مشاهده همه
-                        </button>
-                        <h2 className="border-b border-b-4 border-Ysepa-100 w-max p-1 text-Bsepa-300 font-bold text-xl">
-                            مقالات جدید
-                        </h2>
-                    </div>
+                    <Title title="مقالات جدید" href="#"/>
                     <div className="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-1 md:grid-cols-1">
                         <NewArticleItem />
                         <NewArticleItem />

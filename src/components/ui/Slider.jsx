@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import Button from "./Button"
 
-export default function Slider() {
+export default function Slider({link}) {
     const [sliderRef] = useKeenSlider({
         loop: true,
     })
@@ -21,7 +21,7 @@ export default function Slider() {
                             <p className="text-Bsepa-100 my-12 leading-10">
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.
                             </p>
-                            <Button title={"دریافت گذارش"} href={"#"} />
+                            <Button title={link} href={"#"} />
                         </div>
                     </div>
                     <div className="keen-slider__slide number-slide1 bg-[url('/imgs/slider-img.jpg')] bg-center bg-cover h-[500px] overflow-hidden rounded-2xl ">
