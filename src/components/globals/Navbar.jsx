@@ -15,7 +15,7 @@ export default function Navbar() {
         {
             "id": 2,
             "title": "نقشه زیست بوم",
-            "href": "#"
+            "href": "/map"
         },
         {
             "id": 3,
