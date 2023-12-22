@@ -69,7 +69,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="w-full overflow-hidden ">
-                <div className={`w-1/2 h-screen bg-white fixed top-0  transition-all z-50 duration-1000 ${isShowMobileMenu ? "right-0" : "right-[5900px]"}`}>
+                <div className={`w-3/4 h-screen bg-white fixed top-0  transition-all z-50 duration-1000 ${isShowMobileMenu ? "right-0" : "right-[5900px]"}`}>
                     <div className="flex items-center justify-between p-2 border-b mb-8 pb-2">
                         <IoMdClose onClick={() => setIsShowMobileMenu(!isShowMobileMenu)} className="text-3xl text-gray-700" />
                         <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />

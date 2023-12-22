@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Contact() {
     return (
         <>
-            <div className="flex items-center justify-center mt-12">
+            <div className="flex items-center justify-center mt-12 p-2">
                 <div className="w-[80%] sm:w-[98%] md:w-[95%]">
                     <div className="grid grid-cols-2 gap-8 sm:grid-cols-1">
                         <div className="bg-Bsepa-200 text-Bsepa-300 rounded-xl flex items-center justify-between p-4">
