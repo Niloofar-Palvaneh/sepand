@@ -39,7 +39,7 @@ export default function OurServises() {
                 <div className="grid grid-cols-4 gap-8 w-[80%] sm:grid-cols-1 sm:gap-12 md:grid-cols-2 md:gap-y-24 xl:grid-cols-3 xl:gap-y-12">
                     {
                         servises.map(item => (
-                            <div className="text-center border pb-8 px-4 shadow-xl rounded-xl ">
+                            <div key={item.id} className="text-center border pb-8 px-4 shadow-xl rounded-xl ">
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="w-max border-Bsepa-300 shadow bg-Bsepa-200 text-4xl text-Bsepa-300 p-2 rounded -mt-8 sm:-mt-6">
                                         {item.icon}

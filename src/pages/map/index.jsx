@@ -21,7 +21,7 @@ export default function Map() {
                     </div>
                     <div className=" px-4 flex gap-12 bg-Bsepa-200 rounded-xl w-full sm:flex-col md:flex-col xl:items-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103583.05416115272!2d51.367116800000005!3d35.7761024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e03c6f0000001%3A0xf71ac9f4f900d01c!2sQasr%20Garden%20Museum!5e0!3m2!1sen!2s!4v1703184853887!5m2!1sen!2s"
-                            className="border-4 overflow-hidden border-white rounded -mt-6 -mb-6 sm:m-0 sm:w-full" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            className="border-4 overflow-hidden border-white rounded -mt-6 -mb-6 sm:m-0 sm:w-full" width="600" height="450"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div className="w-1/2 sm:w-full md:w-full">
                             <div className="flex items-end justify-between">
                                 <div className="bg-white flex items-center gap-2 text-gray-600 p-1 rounded-xl shadow">

@@ -31,7 +31,7 @@ export default function Count() {
             <div className="bg-Bsepa-200 flex justify-around items-center p-24 mt-24 sm:p-2 sm:grid sm:grid-cols-2 sm:gap-4  md:p-12">
                 {
                     counts.map(item => (
-                        <div className="flex flex-col items-center gap-2">
+                        <div key={item.title} className="flex flex-col items-center gap-2">
                             <div className="bg-Bsepa-300 text-white text-3xl font-bold py-4 px-6 sm:p4 rounded-xl">
                                 {item.count}
                             </div>
