@@ -50,6 +50,41 @@ export default function About() {
                             <TeamItem title=" مراکز آموزشی" />
                         </div>
                     </div>
+                    <div className="relative ">
+                        <div className="bg-Bsepa-300  grid grid-cols-5 gap-2 p-4 rounded-xl mt-12 sm:grid-cols-2 place-items-center">
+                            <div className="overflow-hidden bg-white  rounded-xl p-2 flex flex-col items-center gap-4">
+                                <Image className="" src={"/imgs/1.png"} width={150} height={100} alt="..." />
+                                <h6 className="text-gray-800 text-center">
+                                    اتحادیه انجمن دانش آموزی
+                                </h6>
+                            </div>
+                            <div className="overflow-hidden bg-white  rounded-xl p-2 flex flex-col items-center gap-4">
+                                <Image className="" src={"/imgs/2.jpg"} width={150} height={100} alt="..." />
+                                <h6 className="text-gray-800 text-center">
+                                   دانشگاه آزاد اسلامی واحد اصفهان
+                                </h6>
+                            </div>
+                            <div className="overflow-hidden bg-white  rounded-xl p-2 flex flex-col items-center gap-4">
+                                <Image className="" src={"/imgs/3.png"} width={150} height={100} alt="..." />
+                                <h6 className="text-gray-800 text-center">
+                                   اداره کل فنی و حرفه ای اصفهان
+                                </h6>
+                            </div>
+                            <div className="overflow-hidden bg-white  rounded-xl p-2 flex flex-col items-center gap-4">
+                                <Image className="" src={"/imgs/4.jpg"} width={150} height={100} alt="..." />
+                                <h6 className="text-gray-800 text-center">
+                                  وزارت ورزش و جوانان اصفهان
+                                </h6>
+                            </div>
+                            <div className="overflow-hidden bg-white  rounded-xl p-2 flex flex-col items-center gap-4">
+                                <Image className="" src={"/imgs/5.png"} width={150} height={100} alt="..." />
+                                <h6 className="text-gray-800 text-center">
+                                    وزارت کار و تعاون و رفاه اجتماعی
+                                </h6>
+                            </div>
+                        </div>
+                        <div className="bg-Ysepa-100 w-3/4 h-[100px] rounded-xl absolute -bottom-6 left-[11%]  -z-[1]"></div>
+                    </div>
                 </div>
             </div>
         </>
