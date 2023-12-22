@@ -5,7 +5,7 @@ export default function About() {
     return (
         <>
             <div className="flex items-center justify-center mt-12">
-                <div className="w-[85%] sm:w-[98%] md:w-[98%]">
+                <div className="w-[87%] sm:w-[98%] md:w-[98%]">
                     <div className="grid grid-cols-2 place-items-center gap-12 sm:flex sm:flex-col md:flex md:flex-col xl:flex xl:flex-col">
                         <div className="relative">
                             <div className="w-[150px] h-[170px] rounded-xl bg-Bsepa-200 absolute -top-4 -right-2 -z-[1]"></div>
@@ -37,9 +37,32 @@ export default function About() {
                             <Target title="توسعه شبکه های مشاوره و منتورینگ" icon={<GrHomeRounded />} />
                         </div>
                     </div>
+                    <div className="w-full flex flex-col mt-24 items-center justify-center gap-4">
+                        <h2 className="border-b border-b-4 border-Ysepa-100 w-max p-1 text-Bsepa-300 font-bold text-xl ">
+                            همکاران
+                        </h2>
+                        <div className="grid grid-cols-6 gap-6 mt-2 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4">
+                            <TeamItem title=" مراکز نوآوری و شتابدهنده ها" />
+                            <TeamItem title="پارک های علم وفناوری" />
+                            <TeamItem title=" صندوق های مالی" />
+                            <TeamItem title=" سازمان های دولتی" />
+                            <TeamItem title=" سازمان های خصوصی" />
+                            <TeamItem title=" مراکز آموزشی" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
+    )
+}
+
+export function TeamItem({ title }) {
+    return (
+        <div className="text-center bg-white border-x border-x-4 border-x-Ysepa-100 px-2 py-4 rounded-br-xl rounded-tl-xl text-[15px]">
+            <h4>
+                {title}
+            </h4>
+        </div>
     )
 }
 
