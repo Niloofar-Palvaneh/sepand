@@ -21,7 +21,7 @@ export default function Navbar() {
         {
             "id": 3,
             "title": "درباره ما",
-            "href": "#"
+            "href": "/about"
         },
         {
             "id": 4,

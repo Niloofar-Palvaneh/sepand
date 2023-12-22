@@ -23,34 +23,7 @@ export default function Footer() {
                 <ul className="flex flex-col items-end gap-2">
                     <li className="text-Ysepa-100 mb-2">لینک های مفید</li>
                     <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
-                            صفحه اصلی
-                            <MdOutlineArrowBack className="text-sm" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={"/map"} className="flex items-center gap-2 text-Bsepa-100">
-                            نقشه زیست بوم
-                            <MdOutlineArrowBack className="text-sm" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
-                            وبلاگ
-                            <MdOutlineArrowBack className="text-sm" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
-                            درباره ما
-                            <MdOutlineArrowBack className="text-sm" />
-                        </Link>
-                    </li>
-                </ul>
-                <ul className="flex flex-col items-end gap-2">
-                    <li className="text-Ysepa-100 mb-2">لینک های مفید</li>
-                    <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
+                        <Link href={"/"} className="flex items-center gap-2 text-Bsepa-100">
                             صفحه اصلی
                             <MdOutlineArrowBack className="text-sm" />
                         </Link>
@@ -68,7 +41,34 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Link href={"#"} className="flex items-center gap-2 text-Bsepa-100">
+                        <Link href={"/about"} className="flex items-center gap-2 text-Bsepa-100">
+                            درباره ما
+                            <MdOutlineArrowBack className="text-sm" />
+                        </Link>
+                    </li>
+                </ul>
+                <ul className="flex flex-col items-end gap-2">
+                    <li className="text-Ysepa-100 mb-2">لینک های مفید</li>
+                    <li>
+                        <Link href={"/"} className="flex items-center gap-2 text-Bsepa-100">
+                            صفحه اصلی
+                            <MdOutlineArrowBack className="text-sm" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/map"} className="flex items-center gap-2 text-Bsepa-100">
+                            نقشه زیست بوم
+                            <MdOutlineArrowBack className="text-sm" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/blogs"} className="flex items-center gap-2 text-Bsepa-100">
+                            وبلاگ
+                            <MdOutlineArrowBack className="text-sm" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/about"} className="flex items-center gap-2 text-Bsepa-100">
                             درباره ما
                             <MdOutlineArrowBack className="text-sm" />
                         </Link>
