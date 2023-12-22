@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { GrHomeRounded } from "react-icons/gr";
 
 export default function About() {
     return (
@@ -21,8 +22,36 @@ export default function About() {
                             </p>
                         </div>
                     </div>
+                    <div className="w-full flex flex-col mt-24 items-center justify-center gap-4">
+                        <h2 className="border-b border-b-4 border-Ysepa-100 w-max p-1 text-Bsepa-300 font-bold text-xl ">
+                            هدف ما
+                        </h2>
+                        <p>
+                            هدف ما توسعه زیرساخت های خلاقیت و نوآوری در سراسر ایران عزیزمان می باشد
+                        </p>
+                        <div className="grid grid-cols-5 gap-6 mt-2 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4">
+                            <Target title="با ایجاد پایگاه های خلاقیت نوآوری" icon={<GrHomeRounded />} />
+                            <Target title="آموزش مهارتی دانش آموزان" icon={<GrHomeRounded />} />
+                            <Target title="آموزش های نخبه پروری" icon={<GrHomeRounded />} />
+                            <Target title="شناسایی استعدادهای برتر" icon={<GrHomeRounded />} />
+                            <Target title="توسعه شبکه های مشاوره و منتورینگ" icon={<GrHomeRounded />} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
+    )
+}
+
+export function Target({ icon, title }) {
+    return (
+        <div className="bg-white rounded-xl p-4 flex items-center justify-center flex-col gap-4 shadow">
+            <div className="text-2xl p-4 text-gray-700 rounded-full bg-Bsepa-200 flex items-center justify-center ">
+                {icon}
+            </div>
+            <p className="text-center">
+                {title}
+            </p>
+        </div>
     )
 }
