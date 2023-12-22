@@ -69,7 +69,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="w-full overflow-hidden ">
-                <div className={`w-full h-screen bg-white fixed top-0  transition-all z-50 duration-1000 ${isShowMobileMenu ? "left-0" : "left-[5900px]"}`}>
+                <div className={`w-1/2 h-screen bg-white fixed top-0  transition-all z-50 duration-1000 ${isShowMobileMenu ? "right-0" : "right-[5900px]"}`}>
                     <div className="flex items-center justify-between p-2 border-b mb-8 pb-2">
                         <IoMdClose onClick={() => setIsShowMobileMenu(!isShowMobileMenu)} className="text-3xl text-gray-700" />
                         <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />
@@ -86,7 +86,7 @@ export default function Navbar() {
                         }
                     </ul>
                 </div>
-                <div className={`z-40 w-full h-screen bg-Bsepa-300 opacity-70 fixed top-0 transition-all duration-700 ${isShowMobileMenu ? "right-0" : "right-[5900px]"}`}></div>
+                <div className={`z-40 w-full h-screen bg-Bsepa-300 opacity-70 fixed top-0 transition-all duration-1000 ${isShowMobileMenu ? "left-0" : "left-[5900px]"}`}></div>
             </div>
             {
                 isOpenLoginModal && <Login isOpenLoginModalHandler={isOpenLoginModalHandler} />
