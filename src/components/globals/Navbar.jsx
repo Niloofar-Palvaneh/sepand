@@ -38,13 +38,13 @@ export default function Navbar() {
 
     const [isOpenLoginModal, setIsOpenLoginModal] = useState(false)
     const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
-    const isOpenLoginModalHandler = async() => {
-       await setIsOpenLoginModal(!isOpenLoginModal)
+    const isOpenLoginModalHandler = async () => {
+        await setIsOpenLoginModal(!isOpenLoginModal)
         if (isOpenLoginModal == false) {
-            window.scroll(0 , 0)
+            window.scroll(0, 0)
             document.body.style.overflowY = 'hidden';
         }
-        else{
+        else {
             document.body.style.overflowY = 'auto';
         }
     }
@@ -70,7 +70,9 @@ export default function Navbar() {
             </div>
             <div className="sticky top-0 backdrop-blur-[8px] bg-transparent hidden sm:block md:block z-50">
                 <div className="flex items-center justify-between p-2">
-                    <Button title={<HiOutlineUser />} href={"#"} />
+                    <div onClick={isOpenLoginModalHandler}>
+                        <Button title={<HiOutlineUser />} />
+                    </div>
                     <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />
                     <div className="rounded-xl bg-Bsepa-300 text-white p-2" onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}>
                         <HiMenuAlt3 className="text-xl " />

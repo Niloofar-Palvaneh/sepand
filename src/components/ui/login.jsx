@@ -5,7 +5,7 @@ export default function Login({isOpenLoginModalHandler}) {
     return (
         <>
             <div className="w-full h-screen fixed top-0 bottom-0 z-50 absolute bg-[#0e286b71] flex items-center justify-center overflow-hidden">
-                <div className="w-[500px] h-[500px] bg-Bsepa-100 absolute rounded-xl shadow-xl p-4">
+                <div className="w-[500px] sm:w-full sm:h-auto h-[500px] bg-Bsepa-100 absolute rounded-xl shadow-xl p-4">
                     <div className="flex items-center justify-between font-bold text-Bsepa-300 text-xl mb-12">
                         <IoCloseSharp onClick={isOpenLoginModalHandler} className="text-2xl shadow rounded-full cursor-pointer"/>
                         <h2>
