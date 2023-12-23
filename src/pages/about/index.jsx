@@ -26,7 +26,7 @@ export default function About() {
                         <h2 className="border-b border-b-4 border-Ysepa-100 w-max p-1 text-Bsepa-300 font-bold text-xl ">
                             هدف ما
                         </h2>
-                        <p>
+                        <p className=" text-center">
                             هدف ما توسعه زیرساخت های خلاقیت و نوآوری در سراسر ایران عزیزمان می باشد
                         </p>
                         <div className="grid grid-cols-5 gap-6 mt-2 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-4">
