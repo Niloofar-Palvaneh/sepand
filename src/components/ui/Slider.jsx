@@ -52,7 +52,7 @@ export default function Slider({ link }) {
                             <p className="text-Bsepa-100 my-12 leading-10">
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.
                             </p>
-                            <Button title={link} href={"#"} />
+                            <Button title={"دریافت گذارش"} href={"#"} />
                         </div>
                     </div>
                     <div className="keen-slider__slide number-slide1 bg-[url('/imgs/slider-img.jpg')] bg-center bg-cover h-[500px] overflow-hidden rounded-2xl ">
