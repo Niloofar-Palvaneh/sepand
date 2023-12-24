@@ -1,8 +1,9 @@
 import Button from "@/components/ui/Button";
 import { IoCloseSharp } from "react-icons/io5";
-import { useForm } from "react-hook-form"
+import {  useForm } from "react-hook-form"
+import SetItemsFromLocal from "@/hooks/GetItemsFromLocal";
 
-export default function Login({ isOpenLoginModalHandler }) {
+export default function Login({ isOpenLoginModalHandler , setUsername }) {
 
     const { register, handleSubmit, getValues, formState: { errors } } = useForm({
         defaultValues: {
@@ -14,6 +15,9 @@ export default function Login({ isOpenLoginModalHandler }) {
 
     const formSubmitting = (data) => {
         localStorage.setItem("name", data.fullName)
+        localStorage.setItem("email", data.email)
+        localStorage.setItem("pass", data.pass)
+        setUsername(getValues("fullName"))
         isOpenLoginModalHandler()
     }
 

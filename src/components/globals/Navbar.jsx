@@ -112,7 +112,7 @@ export default function Navbar() {
                 <div className={`z-40 w-full h-screen bg-Bsepa-300 opacity-70 fixed top-0 transition-all duration-1000 ${isShowMobileMenu ? "left-0" : "left-[5900px]"}`}></div>
             </div>
             {
-                isOpenLoginModal && <Login isOpenLoginModalHandler={isOpenLoginModalHandler} />
+                isOpenLoginModal && <Login isOpenLoginModalHandler={isOpenLoginModalHandler} setUsername={setUsername}/>
             }
         </>
     )
