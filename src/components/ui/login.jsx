@@ -1,8 +1,9 @@
 import Button from "@/components/ui/Button";
 import { IoCloseSharp } from "react-icons/io5";
-import {  useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
+import { redirect } from "next/navigation";
 
-export default function Login({ isOpenLoginModalHandler , setUsername }) {
+export default function Login({ isOpenLoginModalHandler, setUsername }) {
 
     const { register, handleSubmit, getValues, formState: { errors } } = useForm({
         defaultValues: {

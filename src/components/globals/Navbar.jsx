@@ -61,7 +61,13 @@ export default function Navbar() {
 
             <div className="flex items-center justify-around sticky top-0 z-50 py-6 backdrop-blur-[8px] bg-transparent sm:hidden md:hidden xl:py-2">
                 <div onClick={isOpenLoginModalHandler}>
-                    <Button title={username ? username : "ورود / ثبت نام"} />
+                    {
+                        username ? (
+                            <Button title={username} href={"/adminpanel"} />
+                        ) : (
+                            <Button title={"ورود / ثبت نام"} />
+                        )
+                    }
                 </div>
                 <ul className="flex items-center gap-12 xl:gap-8">
                     {
@@ -108,7 +114,7 @@ export default function Navbar() {
                 <div className={`z-40 w-full h-screen bg-Bsepa-300 opacity-70 fixed top-0 transition-all duration-1000 ${isShowMobileMenu ? "left-0" : "left-[5900px]"}`}></div>
             </div>
             {
-                isOpenLoginModal && <Login isOpenLoginModalHandler={isOpenLoginModalHandler} setUsername={setUsername}/>
+                isOpenLoginModal && <Login isOpenLoginModalHandler={isOpenLoginModalHandler} setUsername={setUsername} />
             }
         </>
     )

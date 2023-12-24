@@ -68,6 +68,7 @@ export default function Rank() {
                             {
                                 groupItems.map(item => (
                                     <button
+                                        key={item.id}
                                         onClick={() => setToggleGroups(item.id)}
                                         className={`transition-all shadow ${toggleGroups == item.id && "text-white bg-Bsepa-300"} px-4 py-2 rounded-xl`} key={item.id}>
                                         {item.title}
