@@ -69,7 +69,7 @@ export default function Navbar() {
                 </div>
                 <ul className="flex items-center gap-12 xl:gap-8">
                     {
-                        navbarLinks.map(link => (
+                        navbarLinks.reverse().map(link => (
                             <li key={link.id}>
                                 <Link href={link.href}>
                                     {link.title}
@@ -99,7 +99,7 @@ export default function Navbar() {
                     </div>
                     <ul className="flex flex-col gap-10 xl:gap-8">
                         {
-                            navbarLinks.map(link => (
+                            navbarLinks.reverse().map(link => (
                                 <li key={link.id} className="px-8 py-2 border-b w-full text-end">
                                     <Link href={link.href}>
                                         {link.title}
