@@ -1,7 +1,6 @@
 import Button from "@/components/ui/Button";
 import { IoCloseSharp } from "react-icons/io5";
 import {  useForm } from "react-hook-form"
-import SetItemsFromLocal from "@/hooks/GetItemsFromLocal";
 
 export default function Login({ isOpenLoginModalHandler , setUsername }) {
 

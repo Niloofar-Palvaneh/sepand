@@ -15,7 +15,6 @@ export default function Navbar() {
     }
     useEffect(() => {
         getNameFromLocal()
-        console.log("run");
     }, [username])
 
     const navbarLinks = [
@@ -62,9 +61,6 @@ export default function Navbar() {
 
             <div className="flex items-center justify-around sticky top-0 z-50 py-6 backdrop-blur-[8px] bg-transparent sm:hidden md:hidden xl:py-2">
                 <div onClick={isOpenLoginModalHandler}>
-                    {/* <button className="bg-Ysepa-100 text-white rounded-3xl px-4 py-2">
-                        {username ? username : "ورود / ثبت نام"}
-                    </button> */}
                     <Button title={username ? username : "ورود / ثبت نام"} />
                 </div>
                 <ul className="flex items-center gap-12 xl:gap-8">
