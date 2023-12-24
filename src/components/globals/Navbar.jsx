@@ -83,7 +83,7 @@ export default function Navbar() {
             <div className="sticky top-0 backdrop-blur-[8px] bg-transparent hidden sm:block md:block z-50">
                 <div className="flex items-center justify-between p-2">
                     <div onClick={isOpenLoginModalHandler}>
-                        <Button title={<HiOutlineUser />} />
+                        <Button title={username ? username : "ورود / ثبت نام"} />
                     </div>
                     <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />
                     <div className="rounded-xl bg-Bsepa-300 text-white p-2" onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}>

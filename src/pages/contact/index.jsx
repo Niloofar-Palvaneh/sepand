@@ -1,6 +1,8 @@
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import Image from "next/image";
+import { useState } from "react";
+import Login from "@/components/ui/login";
 
 export default function Contact() {
     return (
@@ -33,14 +35,14 @@ export default function Contact() {
                     <div className="flex flex-col gap-8 items-center justify-center bg-white rounded mt-8 p-12 shadow-xl">
                         <Image src={"/imgs/contact.avif"} width={200} height={200} alt="..." />
                         <p className="w-1/2 text-gray-600 text-center sm:w-full">
-                        جهت دریافت خدمات مشاوره و پاسخگویی سریع لطفا ابتدا عضو وبسایت شده و از طریق تیکت با دپارتمان های مختلف ارتباط بگیرید
+                            جهت دریافت خدمات مشاوره و پاسخگویی سریع لطفا ابتدا عضو وبسایت شده و از طریق تیکت با دپارتمان های مختلف ارتباط بگیرید
                         </p>
-                        <div className="bg-Bsepa-300 text-white rounded-xl flex items-center justify-between px-6 py-2">
+                        <div className="bg-Bsepa-300 text-white rounded-xl flex items-center justify-between px-6 py-2 cursor-pointer">
                             <span>عضویت</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
