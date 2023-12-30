@@ -63,7 +63,13 @@ export default function Navbar() {
                 <div onClick={isOpenLoginModalHandler}>
                     {
                         username ? (
-                            <Button title={username} href={"/adminpanel"} />
+                            <>
+                                <span class="relative flex h-4 w-4">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-4 w-4 bg-Bsepa-200"></span>
+                                </span>
+                                <Button title={username} href={"/adminpanel"} />
+                            </>
                         ) : (
                             <Button title={"ورود / ثبت نام"} />
                         )
@@ -84,9 +90,21 @@ export default function Navbar() {
             </div>
             <div className="sticky top-0 backdrop-blur-[8px] bg-transparent hidden sm:block md:block z-50">
                 <div className="flex items-center justify-between p-2">
-                    <div onClick={isOpenLoginModalHandler}>
-                        <Button title={username ? username : "ورود / ثبت نام"} />
-                    </div>
+                <div onClick={isOpenLoginModalHandler}>
+                    {
+                        username ? (
+                            <>
+                                <span class="relative flex h-4 w-4">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-4 w-4 bg-Bsepa-200"></span>
+                                </span>
+                                <Button title={username} href={"/adminpanel"} />
+                            </>
+                        ) : (
+                            <Button title={"ورود / ثبت نام"} />
+                        )
+                    }
+                </div>
                     <Image src={"/imgs/logo.png"} width={120} height={120} alt="logo" />
                     <div className="rounded-xl bg-Bsepa-300 text-white p-2" onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}>
                         <HiMenuAlt3 className="text-xl " />
