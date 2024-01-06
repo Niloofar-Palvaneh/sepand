@@ -3,6 +3,9 @@ import { useState } from "react"
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 export default function Rank() {
+    const [tableRow, setTableRow] = useState(1)
+    const [toggleGroups, setToggleGroups] = useState(1)
+
     const groupItems = [
         {
             id: 1,
@@ -13,7 +16,7 @@ export default function Rank() {
             title: "زیست بوم کارآفربنی"
         },
     ]
-    const tableItems = [
+    const tableItemsNoavari = [
         {
             id: 1,
             scorse: 280,
@@ -57,7 +60,54 @@ export default function Rank() {
             arow: 2
         },
     ]
-    const [toggleGroups, setToggleGroups] = useState(1)
+    const tableItemsNoavarsKarafrini = [
+        {
+            id: 1,
+            scorse: 1000,
+            country: "ایران",
+            city: "کرمان",
+            arow: 2
+        },
+        {
+            id: 2,
+            scorse: 210,
+            country: "ایران",
+            city: "اهواز",
+            arow: 5
+        },
+        {
+            id: 3,
+            scorse: 150,
+            country: "ایران",
+            city: "سمنان",
+            arow: 8
+        },
+        {
+            id: 4,
+            scorse: 980,
+            country: "ایران",
+            city: "همدان",
+            arow: 7
+        },
+        {
+            id: 5,
+            scorse: 88,
+            country: "ایران",
+            city: "اصفهان",
+            arow: 5
+        },
+        {
+            id: 6,
+            scorse: 10,
+            country: "ایران",
+            city: "تهران",
+            arow: 2
+        },
+    ]
+    const changeGroup = (id) => {
+        setToggleGroups(id)
+        setTableRow(id)
+    }
     return (
         <>
             <div>
@@ -69,7 +119,7 @@ export default function Rank() {
                                 groupItems.map(item => (
                                     <button
                                         key={item.id}
-                                        onClick={() => setToggleGroups(item.id)}
+                                        onClick={() => changeGroup(item.id)}
                                         className={`transition-all shadow ${toggleGroups == item.id && "text-white bg-Bsepa-300"} px-4 py-2 rounded-xl`} key={item.id}>
                                         {item.title}
                                     </button>
@@ -94,23 +144,40 @@ export default function Rank() {
                             <span >رتبه</span>
                         </div>
                         {
-                            tableItems.map(item => (
-                                <div className="flex items-center justify-between bg-white  px-4 py-2 rounded border shadow  text-gray-600 mt-2">
-                                    <span >{item.scorse}</span>
-                                    <span >{item.country}</span>
-                                    <span >{item.city}</span>
-                                    <div className="flex items-center gap-2">
-                                        <div className="flex flex-col items-center text-[12px]">
-                                            <MdKeyboardArrowUp className="text-green-500" />
-                                            <span>2</span>
-                                            <MdKeyboardArrowDown className="text-red-500" />
+                            tableRow === 1 ? (
+                                tableItemsNoavari.map(item => (
+                                    <div className="flex items-center justify-between bg-white  px-4 py-2 rounded border shadow  text-gray-600 mt-2">
+                                        <span >{item.scorse}</span>
+                                        <span >{item.country}</span>
+                                        <span >{item.city}</span>
+                                        <div className="flex items-center gap-2">
+                                            <div className="flex flex-col items-center text-[12px]">
+                                                <MdKeyboardArrowUp className="text-green-500" />
+                                                <span>2</span>
+                                                <MdKeyboardArrowDown className="text-red-500" />
+                                            </div>
+                                            <span>{item.arow}</span>
                                         </div>
-                                        <span>{item.arow}</span>
                                     </div>
-                                </div>
-                            ))
+                                ))
+                            ) : (
+                                tableItemsNoavarsKarafrini.map(item => (
+                                    <div className="flex items-center justify-between bg-white  px-4 py-2 rounded border shadow  text-gray-600 mt-2">
+                                        <span >{item.scorse}</span>
+                                        <span >{item.country}</span>
+                                        <span >{item.city}</span>
+                                        <div className="flex items-center gap-2">
+                                            <div className="flex flex-col items-center text-[12px]">
+                                                <MdKeyboardArrowUp className="text-green-500" />
+                                                <span>2</span>
+                                                <MdKeyboardArrowDown className="text-red-500" />
+                                            </div>
+                                            <span>{item.arow}</span>
+                                        </div>
+                                    </div>
+                                ))
+                            )
                         }
-
                     </div>
                 </div>
             </div>
