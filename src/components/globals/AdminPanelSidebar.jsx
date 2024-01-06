@@ -47,6 +47,9 @@ export default function AdminPanelSidebar() {
                             ))
                         }
                     </ul>
+                    <div className="bg-red-500  text-center text-white p-2 rounded transition hover:bg-red-600 cursor-pointer mt-12">
+                        خروج از داشبورد
+                    </div>
                 </div>
             </div>
         </>
