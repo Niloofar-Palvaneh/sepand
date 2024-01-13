@@ -3,6 +3,7 @@ import { MdDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaUserSecret } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
+import { useState } from "react";
 
 export default function AdminPanelSidebar() {
     const menus = [
@@ -27,9 +28,11 @@ export default function AdminPanelSidebar() {
             icon: <MdArticle />,
         }
     ]
+    const [activeMenu, setActiveMenu] = useState(1)
+
     return (
         <>
-            <div className="shadow border h-full w-1/2 flex flex-col gap-8 items-center justify-center bg-white p-4 rounded ">
+            <div className="shadow border h-full w-1/2 flex flex-col gap-8 items-center justify-center bg-white p-4 rounded sm:w-full ">
                 <div className="flex flex-col items-center justify-center gap-2">
                     <Image src={"/imgs/admin.png"} width={30} height={30} alt="logo" />
                     <span className="bg-Bsepa-200 text-gray-500 text-sm rounded shadow px-2">
@@ -40,7 +43,10 @@ export default function AdminPanelSidebar() {
                     <ul className="flex justify-end items-end gap-4 flex-col" >
                         {
                             menus.map(item => (
-                                <li key={item.id} className="flex items-center justify-end gap-2 text-gray-700 cursor-pointer transition hover:bg-gray-100 w-full rounded p-2">
+                                <li
+                                    onClick={() => setActiveMenu(item.id)}
+                                    key={item.id}
+                                    className={`${item.id === activeMenu && "bg-gray-100"} flex items-center justify-end gap-2 text-gray-700 cursor-pointer transition hover:bg-gray-100 w-full rounded p-2`}>
                                     {item.title}
                                     {item.icon}
                                 </li>
