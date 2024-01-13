@@ -16,7 +16,7 @@ export default function AdminPanel() {
             id: 2,
             title: "شتاب دهنده آرزو",
             rank: 88,
-            city: "بوشهر"
+            city: "همدان"
         },
         {
             id: 3,
@@ -37,10 +37,6 @@ export default function AdminPanel() {
             city: "تبریز"
         },
     ]
-    const [isShowWelcome, setIsShowWelcome] = useState(true)
-    const [searchInputValue, setSearchInputValue] = useState("")
-    const [resultSerach, setResultSearch] = useState(centers)
-
     const notifs = [
         {
             id: 1,
@@ -74,12 +70,32 @@ export default function AdminPanel() {
         },
     ]
 
+    const [isShowWelcome, setIsShowWelcome] = useState(true)
+    const [searchInputValue, setSearchInputValue] = useState("")
+    const [resultSerach, setResultSearch] = useState(centers)
+
+
     const searchHandler = (e) => {
         setSearchInputValue(e.target.value)
     }
     const serchResultHandler = () => {
         const result = centers.filter(item => item.title.includes(searchInputValue))
         setResultSearch(result)
+    }
+    const filterHandler = (e) => {
+        console.log(e.target.value);
+        if (e.target.value === "0") {
+            setResultSearch(centers)
+        } else if (e.target.value === "اصفهان") {
+            let cennter1 = centers
+            setResultSearch(cennter1.filter(item => item.city == "اصفهان"))
+        } else if (e.target.value === "تبریز") {
+            let cennter2 = centers
+            setResultSearch(cennter2.filter(item => item.city == "تبریز"))
+        } else if (e.target.value === "همدان") {
+            let cennter3 = centers
+            setResultSearch(cennter3.filter(item => item.city == "همدان"))
+        }
     }
 
     return (
@@ -105,11 +121,14 @@ export default function AdminPanel() {
                         </div>
                         <div className="mt-12 bg-white p-2 rounded shadow border">
                             <div className="flex items-center justify-between">
-                                <select>
-                                    <option value="0">انتخاب شهر</option>
-                                    <option value="1">اصفهان</option>
-                                    <option value="2">تبریز</option>
-                                    <option value="3">همدان</option>
+                                <button onClick={()=>setResultSearch(centers)} className="bg-Bsepa-300 text-white py-1 px-2 rounded cursor-pointer">
+                                    حذف تمام فیلتر ها
+                                </button>
+                                <select className="shadow p-1 rounded" onChange={filterHandler}>
+                                    <option className="p-2 text-sm text-gray-700" value="0">انتخاب شهر</option>
+                                    <option className="p-2 text-sm text-gray-700" value="اصفهان">اصفهان</option>
+                                    <option className="p-2 text-sm text-gray-700" value="تبریز">تبریز</option>
+                                    <option className="p-2 text-sm text-gray-700" value="همدان">همدان</option>
                                 </select>
                                 <div className="bg-white p-2 rounded flex items-center justify-between shadow">
                                     <RiSearch2Line onClick={serchResultHandler} className="text-3xl text-Bsepa-300 bg-blue-100 rounded p-1 cursor-pointer" />
@@ -136,9 +155,9 @@ export default function AdminPanel() {
                                     ))
                                 ) : (
                                     <div className="flex flex-col items-end mt-8 gap-4">
-                                            <p className="p-2 bg-red-100 w-full text-center rounded">
-                                                نتیجه ای برای جستجوی {searchInputValue} یافت نشد
-                                            </p>
+                                        <p className="p-2 bg-red-100 w-full text-center rounded">
+                                            نتیجه ای برای جستجوی {searchInputValue} یافت نشد
+                                        </p>
                                         <div className="w-full flex items-end flex-col" >
                                             <span className="text-gray-700 text-end">:لطفا موارد زیر را برسی و مجدد تلاش کنید</span>
                                             <ul className="text-gray-500 mt-4 list-outside list-decimal text-right list-style mr-6 flex flex-col gap-2">
