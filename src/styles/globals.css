@@ -105,3 +105,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,31,204,1) 36%, rgba(249,255,0,1) 51%, rgba(37,88,179,1) 62%, rgba(9,9,121,1) 100%);
 }
+.list-style{
+  direction: rtl;
+}
