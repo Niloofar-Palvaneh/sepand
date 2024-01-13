@@ -120,17 +120,17 @@ export default function AdminPanel() {
                             }
                         </div>
                         <div className="mt-12 bg-white p-2 rounded shadow border">
-                            <div className="flex items-center justify-between">
-                                <button onClick={()=>setResultSearch(centers)} className="bg-Bsepa-300 text-white py-1 px-2 rounded cursor-pointer">
+                            <div className="flex items-center justify-between border-b p-2 sm:flex-col-reverse sm:gap-2 md:flex-col-reverse md:gap-2">
+                                <button onClick={()=>setResultSearch(centers)} className="sm:w-full md:w-full bg-Bsepa-300 text-white py-1 px-2 rounded cursor-pointer">
                                     حذف تمام فیلتر ها
                                 </button>
-                                <select className="shadow p-1 rounded" onChange={filterHandler}>
+                                <select className="shadow p-1 rounded outline-none sm:w-full md:w-full" onChange={filterHandler}>
                                     <option className="p-2 text-sm text-gray-700" value="0">انتخاب شهر</option>
                                     <option className="p-2 text-sm text-gray-700" value="اصفهان">اصفهان</option>
                                     <option className="p-2 text-sm text-gray-700" value="تبریز">تبریز</option>
                                     <option className="p-2 text-sm text-gray-700" value="همدان">همدان</option>
                                 </select>
-                                <div className="bg-white p-2 rounded flex items-center justify-between shadow">
+                                <div className="bg-white p-2 rounded flex items-center justify-between shadow sm:w-full md:w-full">
                                     <RiSearch2Line onClick={serchResultHandler} className="text-3xl text-Bsepa-300 bg-blue-100 rounded p-1 cursor-pointer" />
                                     <input
                                         className="bg-transparent border-none outline-none text-end"
@@ -141,7 +141,7 @@ export default function AdminPanel() {
                             {
                                 resultSerach.length ? (
                                     resultSerach.map(item => (
-                                        <div className="w-full flex items-center p-1 justify-between border-b border-gray-500">
+                                        <div className="w-full flex items-center p-1 justify-between border-b border-gray-500 mt-6">
                                             <div className="flex flex-col items-center">
                                                 <span>{item.rank}</span>
                                                 <span className="text-[15px] text-gray-600">رتبه</span>
@@ -169,6 +169,9 @@ export default function AdminPanel() {
                                                 </li>
                                                 <li>
                                                     برسی کنید واژه وارد شده معتبر باشد.
+                                                </li>
+                                                <li>
+                                                    اتصال دستگاه به تحریم شکن را قطع کنید.
                                                 </li>
                                             </ul>
                                         </div>
