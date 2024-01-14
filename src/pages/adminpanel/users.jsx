@@ -79,7 +79,7 @@ export default function users() {
         <>
             <Layout>
                 <div className="w-full flex flex-col gap-2">
-                    <div className="flex items-center justify-around bg-blue-100 p-2 rounded font-bold">
+                    <div className="flex items-center justify-around bg-Bsepa-300 text-white p-2 rounded font-bold">
                         <span className="text-end w-[60px]">شهر</span>
                         <span className="text-end w-[60px]">نام</span>
                         <span className="text-end w-[60px]">ردیف</span>
