@@ -27,14 +27,22 @@ export default function users() {
                     </div>
                     <div className="flex flex-col items-center justify-between gap-2 mt-6 w-full">
                         {
-                            admins.map(admin => (
-                                <div className="flex items-center justify-between w-full cursor-pointer hover:bg-blue-100 p-2">
-                                    <div>{admin.address.city}</div>
-                                    <div>{admin.username}</div>
-                                    <div >{admin.name}</div>
-                                    <div className="w-[36px]">{admin.id}</div>
-                                </div>
-                            ))
+                            admins.length ? (
+                                admins.map(admin => (
+                                    <div className="flex items-center justify-between w-full cursor-pointer hover:bg-blue-100 p-2">
+                                        <div>{admin.address.city}</div>
+                                        <div>{admin.username}</div>
+                                        <div >{admin.name}</div>
+                                        <div className="w-[36px]">{admin.id}</div>
+                                    </div>
+                                ))
+                            ) : (
+                                    <div class="flex w-full items-center justify-center">
+                                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-Bsepa-300 to-Ysepa-100 animate-spin">
+                                            <div class="h-9 w-9 rounded-full bg-Bsepa-100"></div>
+                                        </div>
+                                    </div>
+                           )
                         }
                     </div>
                 </div>
