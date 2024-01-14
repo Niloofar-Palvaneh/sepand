@@ -5,10 +5,8 @@ import { FaUserSecret } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function AdminPanelSidebar() {
-    const router = useRouter()
     const menus = [
         {
             id: 1,
@@ -26,13 +24,13 @@ export default function AdminPanelSidebar() {
             id: 4,
             title: "ادمین ها",
             icon: <FaUserSecret />,
-            href: "/adminpanel/users"
+            href: "/adminpanel/admins"
         },
         {
             id: 5,
             title: "مقالات",
             icon: <MdArticle />,
-            href: "/adminpanel/users"
+            href: "/"
         }
     ]
     const [activeMenu, setActiveMenu] = useState(1)

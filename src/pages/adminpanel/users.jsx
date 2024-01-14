@@ -1,6 +1,6 @@
 import AdminPanelSidebar from "@/components/globals/AdminPanelSidebar";
 import { useEffect, useState } from "react";
-
+import Layout from "./layou";
 
 export default function users() {
     const users = [
@@ -77,39 +77,36 @@ export default function users() {
     }
     return (
         <>
-            <div className="flex items-center justify-center mt-8">
-                <div className="w-[80%] flex gap-4 sm:flex-col-reverse sm:w-[98%] md:w-[97%] xl:w-[98%]">
-                    <div className="w-full flex flex-col gap-2">
-                        <div className="flex items-center justify-around bg-blue-100 p-2 rounded font-bold">
-                            <span className="text-end w-[60px]">شهر</span>
-                            <span className="text-end w-[60px]">نام</span>
-                            <span className="text-end w-[60px]">ردیف</span>
-                        </div>
-                        {
-                            paginatedUsers.map(user => (
-                                <div className="flex items-center justify-around bg-white p-1 rounded 
+            <Layout>
+                <div className="w-full flex flex-col gap-2">
+                    <div className="flex items-center justify-around bg-blue-100 p-2 rounded font-bold">
+                        <span className="text-end w-[60px]">شهر</span>
+                        <span className="text-end w-[60px]">نام</span>
+                        <span className="text-end w-[60px]">ردیف</span>
+                    </div>
+                    {
+                        paginatedUsers.map(user => (
+                            <div className="flex items-center justify-around bg-white p-1 rounded 
                                 shadow border text-gray-500 hover:text-gray-900 hover:bg-Bsepa-100">
-                                    <span className="text-end w-[60px]">{user.city}</span>
-                                    <span className="text-end w-[60px]">{user.name}</span>
-                                    <span className="text-end w-[60px]">{user.id}</span>
-                                </div>
+                                <span className="text-end w-[60px]">{user.city}</span>
+                                <span className="text-end w-[60px]">{user.name}</span>
+                                <span className="text-end w-[60px]">{user.id}</span>
+                            </div>
+                        ))
+                    }
+                    <div className="flex flex-row-reverse items-center justify-center gap-4">
+                        {
+                            pagesNumber.map(item => (
+                                <button
+                                    className={`
+                                        px-4 py-2 rounded shadow ${currentPage === item + 1 && "bg-Bsepa-300 text-white"}`}
+                                    onClick={() => changePageHandler(item + 1)}
+                                >{item + 1}</button>
                             ))
                         }
-                        <div className="flex flex-row-reverse items-center justify-center gap-4">
-                            {
-                                pagesNumber.map(item => (
-                                    <button
-                                        className={`
-                                        px-4 py-2 rounded shadow ${currentPage === item + 1 && "bg-Bsepa-300 text-white"}`}
-                                        onClick={() => changePageHandler(item + 1)}
-                                    >{item + 1}</button>
-                                ))
-                            }
-                        </div>
                     </div>
-                    <AdminPanelSidebar />
                 </div>
-            </div>
+            </Layout>
         </>
     )
 }
