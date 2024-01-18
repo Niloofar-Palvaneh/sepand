@@ -1,5 +1,6 @@
 import Layout from "./layou";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function users() {
     const [admins, setAdmins] = useState([])
@@ -37,13 +38,21 @@ export default function users() {
                                     </div>
                                 ))
                             ) : (
-                                    <div class="flex w-full items-center justify-center">
-                                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-Bsepa-300 to-Ysepa-100 animate-spin">
-                                            <div class="h-9 w-9 rounded-full bg-Bsepa-100"></div>
-                                        </div>
+                                <div class="flex w-full items-center justify-center">
+                                    <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-Bsepa-300 to-Ysepa-100 animate-spin">
+                                        <div class="h-9 w-9 rounded-full bg-Bsepa-100"></div>
                                     </div>
-                           )
+                                </div>
+                            )
                         }
+                        <div className="flex items-center justify-center w-full text-center">
+                            <p className="flex flex-col gap-1 text-gray-500 text-sm mt-8">
+                                اطلاعات ادمین ها از سایت زیر گرفته شده و فیک میباشند
+                                <Link className="underline" href={"https://jsonplaceholder.typicode.com/"}>
+                                jsonplaceholder
+                                </Link>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </Layout>
