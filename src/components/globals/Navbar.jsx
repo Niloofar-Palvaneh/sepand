@@ -58,6 +58,7 @@ export default function Navbar() {
             document.body.classList.remove("o");
         }
     }
+    
     return (
         <>
 
