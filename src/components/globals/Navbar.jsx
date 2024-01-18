@@ -48,14 +48,14 @@ export default function Navbar() {
     ]
     const [isOpenLoginModal, setIsOpenLoginModal] = useState(false)
     const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
+
     const isOpenLoginModalHandler = async () => {
         await setIsOpenLoginModal(!isOpenLoginModal)
         if (isOpenLoginModal == false) {
             window.scroll(0, 0)
-            document.body.style.overflowY = 'hidden';
-        }
-        else {
-            document.body.style.overflowY = 'auto';
+            document.body.classList.add("o");
+        }else{
+            document.body.classList.remove("o");
         }
     }
     return (

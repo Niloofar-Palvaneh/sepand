@@ -36,7 +36,6 @@ export default function AdminPanelSidebar() {
     ]
 
     const router = useRouter()
-    console.log(router.pathname = "/");
     const [activeMenu, setActiveMenu] = useState(1)
 
     const removeUserFromLocal = () => {

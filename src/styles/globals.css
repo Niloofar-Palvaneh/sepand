@@ -108,3 +108,6 @@ body {
 .list-style{
   direction: rtl;
 }
+.o{
+  overflow-y: hidden;
+}
