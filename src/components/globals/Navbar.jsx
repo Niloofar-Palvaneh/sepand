@@ -53,11 +53,11 @@ export default function Navbar() {
         await setIsOpenLoginModal(!isOpenLoginModal)
         if (isOpenLoginModal == false) {
             window.scroll(0, 0)
-           let v = document.querySelector("body")
-           v.classList.add("o");
+        //    let v = document.querySelector("body")
+        //    v.classList.add("o");
         }else{
-            let l = document.querySelector("body")
-            l.classList.remove("o");
+            // let l = document.querySelector("body")
+            // l.classList.remove("o");
         }
     }
     
