@@ -5,8 +5,8 @@ import { RiSearch2Line } from "react-icons/ri";
 import Layout from "./layou";
 
 export default function AdminPanel() {
-    document.body.classList.remove("o");
-
+    let l = document.querySelector("body")
+    l.classList.remove("o");
     const centers = [
         {
             id: 1,
