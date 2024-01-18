@@ -5,6 +5,7 @@ import { FaUserSecret } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function AdminPanelSidebar() {
     const menus = [
@@ -33,7 +34,15 @@ export default function AdminPanelSidebar() {
             href: "/"
         }
     ]
+
+    const router = useRouter()
+    console.log(router.pathname = "/");
     const [activeMenu, setActiveMenu] = useState(1)
+
+    const removeUserFromLocal = () => {
+        localStorage.removeItem("name")
+        router.push('/')
+    }
 
     return (
         <>
@@ -58,7 +67,9 @@ export default function AdminPanelSidebar() {
                             ))
                         }
                     </ul>
-                    <div className="bg-red-500  text-center text-white p-2 rounded transition hover:bg-red-600 cursor-pointer mt-12">
+                    <div
+                        onClick={() => removeUserFromLocal()}
+                        className="bg-red-500  text-center text-white p-2 rounded transition hover:bg-red-600 cursor-pointer mt-12">
                         خروج از داشبورد
                     </div>
                 </div>

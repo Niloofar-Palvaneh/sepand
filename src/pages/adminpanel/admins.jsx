@@ -15,7 +15,6 @@ export default function users() {
             }).then(admins => setAdmins(admins))
 
     }, [])
-    console.log(admins);
     return (
         <>
             <Layout>
